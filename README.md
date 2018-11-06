@@ -34,3 +34,16 @@
 1_ dl un fichier texte
 2_ dl un fichier jpeg/image
 3_ dl un fichier pdf/binaire
+
+## DOCS
+
+##### Express
+https://expressjs.com/fr/4x/api.html
+https://expressjs.com/fr/guide/routing.html
+
+##### ES6
+https://www.wanadev.fr/21-introduction-a-ecmascript-6-le-javascript-de-demain/
+https://developer.mozilla.org/fr/docs/Web/JavaScript/Nouveaut%C3%A9s_et_historique_de_JavaScript/Support_ECMAScript_2015_par_Mozilla
+
+##### ________
+https://www.npmjs.com/
