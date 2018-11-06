@@ -1,9 +1,7 @@
-/*
-const upload = require('./upload');
-const download = require('./download');
+const upload = require('./upload/index');
+//const download = require('./download');
 
 module.exports = (router) => {
   upload(router),
-  download(router)
+  //download(router)
 }
-*/

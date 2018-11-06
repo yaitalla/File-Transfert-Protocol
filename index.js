@@ -1,12 +1,12 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-//const ftpRouter = require('./ftpRoutes')
+const uploadRoute = require('./ftp/upload');
 
 const app = express();
 
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use('/upload', uploadRoute);
 /*
-app.use('/upload', ftpRouter);
 app.use('/download', ftpRouter);
 */
 
