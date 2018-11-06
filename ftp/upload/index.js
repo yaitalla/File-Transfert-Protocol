@@ -27,7 +27,7 @@ router.post('/', (req, res) => {
     });
   }
   let sampleFile = req.files.sampleFile;
-  sampleFile.mv('/uploadedFiles/', function(err) {
+  sampleFile.mv('./uploadedFiles/'+sampleFile.name, function(err) {
     if (err){
       return res.status(500).send(err);
     }
