@@ -3,9 +3,17 @@
 <title>Upload file</title>
 </head>
 <body>
-<form method="post" action="/upload" enctype="multipart/form-data">
-<input type="file" name="sampleFile"/>
-<button type="submit">Upload File</button>
-</form>
+  <div>
+    <form method="post" action="/upload" enctype="multipart/form-data">
+      <input type="file" name="sampleFile"/>
+      <button type="submit" name="press" value="ok">Upload File</button>
+    </form>
+  </div>
+  <div>
+    <form method="post" action="/download" enctype="multipart/form-data">
+      <button type="submit" name="" value="">Download Picture</button>
+    </form>
+  </div>
+
 </body>
 </html>
