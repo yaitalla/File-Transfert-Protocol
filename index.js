@@ -1,21 +1,16 @@
 const express = require('express');
-const fileUpload = require('express-fileupload');
 const bodyParser = require('body-parser');
-const uploadRoute = require('./ftp/upload');
-
+const routes = require('./routes/ftp');
+const helmet = require('helmet');
 const app = express();
 
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(helmet());
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(fileUpload())
-app.use('/upload', uploadRoute);
-/*
-app.use('/download', ftpRouter);
-*/
-app.get('/', function(req,res){
-    res.sendFile(__dirname + '/index.html');
-});
+app.use('/ftp', routes);
+app.use(express.static('./static'));
 
-app.listen(4000, () => {
+
+app.listen(process.env.port || 4000, () => {
   console.log('Server listening on http://localhost:4000 or http://127.0.0.1:4000')
 })
