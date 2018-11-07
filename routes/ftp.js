@@ -36,7 +36,8 @@ router.post('/upload', (req, res) => {
   if (isEmpty(req.files)) {
     res.redirect('/');
   } else {
-    fs.writeFile(__dirname+'/../uploadedFiles/'+req.files.sampleFile.name, req.files.sampleFile.data, function (err) {
+    const srcName = Object.getOwnPropertyNames(req.files)[0];
+    fs.writeFile(__dirname+'/../uploadedFiles/'+req.files[srcName].name, req.files[srcName].data, function (err) {
       if (err) {
         return res.sendStatus(500).json({
           message: err
@@ -51,11 +52,9 @@ router.post('/upload', (req, res) => {
 
 });
 
-
 router.post('/download', (req, res) => {
   res.download('./demi.png');
 });
-
 
 router.get('/getUploadedFiles', (req, res) => {
   fs.readdir(__dirname+'/../uploadedFiles', (err, files) => {
@@ -69,7 +68,6 @@ router.get('/getUploadedFiles', (req, res) => {
     } else {
       console.log(files);
     }
-
     res.redirect('/');
   });
 });
