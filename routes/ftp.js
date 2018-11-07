@@ -26,12 +26,22 @@ function isEmpty(obj) {
     return true;
 }
 
+router.get('/', (req, res) => {
+  res.sendStatus(401).json({
+    message: 'admin page'
+  });
+});
+
 router.post('/upload', (req, res) => {
   if (isEmpty(req.files)) {
     res.redirect('/');
   } else {
     fs.writeFile(__dirname+'/../uploadedFiles/'+req.files.sampleFile.name, req.files.sampleFile.data, function (err) {
-      if (err) throw err;
+      if (err) {
+        return res.sendStatus(500).json({
+          message: err
+        });
+      }
       return res.status(200).json({
         success: true,
         message: 'File Uploaded Successfuly'
@@ -49,7 +59,11 @@ router.post('/download', (req, res) => {
 
 router.get('/getUploadedFiles', (req, res) => {
   fs.readdir(__dirname+'/../uploadedFiles', (err, files) => {
-    if (err) throw err
+    if (err) {
+      return res.sendStatus(500).json({
+        message: err
+      });
+    }
     if (isEmpty(files)) {
       console.log('folder is empty');
     } else {
