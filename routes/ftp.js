@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const Usertoken = require('../config/conf');
+const fs = require('fs');
+
 
 
 //Middleware function
@@ -17,7 +19,13 @@ const uploadToken = (req, res, next) => {
 //router.use(uploadToken);
 
 router.post('/upload', (req, res) => {
-  res.send(req.files.sampleFile.data)
+  fs.writeFile('./uploadedFiles/'+req.files.sampleFile.name, req.files.sampleFile.data, function (err) {
+    if (err) throw err;
+    return res.status(200).json({
+      success: true,
+      message: 'File Uploaded Successfuly'
+    });
+  });
 });
 
 
