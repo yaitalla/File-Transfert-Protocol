@@ -17,19 +17,13 @@ const uploadToken = (req, res, next) => {
 //router.use(uploadToken);
 
 router.post('/upload', (req, res) => {
-  console.log(req.headers['content-type']);
-  res.redirect('/');
+  res.send(req.files.sampleFile.data)
 });
 
-/*
+
 router.post('/download', (req, res) => {
-  res.download("../demi.png");
-  res.sendStatus(200).json({
-    message: 'File downloaded Successfuly'
-  });
+  res.download('./demi.png');
 });
-*/
-
 
 
 
