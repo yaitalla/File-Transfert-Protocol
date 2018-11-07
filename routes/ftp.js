@@ -16,7 +16,17 @@ const uploadToken = (req, res, next) => {
   }
 }
 
+const getHeaders = (req, res, next) => {
+  if (req.headers['content-type'] === undefined)
+    console.log(req.headers);
+  else
+    console.log(req.headers['content-type']);
+  next();
+}
+
 //router.use(uploadToken);
+router.use(getHeaders);
+
 
 function isEmpty(obj) {
     for(var key in obj) {
@@ -71,6 +81,17 @@ router.get('/getUploadedFiles', (req, res) => {
     res.redirect('/');
   });
 });
+
+router.get('/delete', (req, res) => {
+  console.log('deleted');
+  res.redirect('/');
+  /*
+  fs.unlink('path/file.txt', (err) => {
+    if (err) throw err;
+    console.log('path/file.txt was deleted');
+  });
+  */
+})
 
 
 module.exports = router;
