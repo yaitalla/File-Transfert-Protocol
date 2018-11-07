@@ -17,6 +17,7 @@ const uploadToken = (req, res, next) => {
 }
 
 const getHeaders = (req, res, next) => {
+	// POURQUOI ?
   if (req.headers['content-type'] === undefined)
     console.log(req.headers);
   else
