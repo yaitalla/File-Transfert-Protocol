@@ -18,14 +18,27 @@ const uploadToken = (req, res, next) => {
 
 //router.use(uploadToken);
 
+function isEmpty(obj) {
+    for(var key in obj) {
+        if(obj.hasOwnProperty(key))
+            return false;
+    }
+    return true;
+}
+
 router.post('/upload', (req, res) => {
-  fs.writeFile('./uploadedFiles/'+req.files.sampleFile.name, req.files.sampleFile.data, function (err) {
-    if (err) throw err;
-    return res.status(200).json({
-      success: true,
-      message: 'File Uploaded Successfuly'
+  if (isEmpty(req.files)) {
+    res.redirect('/');
+  } else {
+    fs.writeFile(__dirname+'/../uploadedFiles/'+req.files.sampleFile.name, req.files.sampleFile.data, function (err) {
+      if (err) throw err;
+      return res.status(200).json({
+        success: true,
+        message: 'File Uploaded Successfuly'
+      });
     });
-  });
+  }
+
 });
 
 
@@ -34,6 +47,18 @@ router.post('/download', (req, res) => {
 });
 
 
+router.get('/getUploadedFiles', (req, res) => {
+  fs.readdir(__dirname+'/../uploadedFiles', (err, files) => {
+    if (err) throw err
+    if (isEmpty(files)) {
+      console.log('folder is empty');
+    } else {
+      console.log(files);
+    }
+
+    res.redirect('/');
+  });
+});
 
 
 module.exports = router;
