@@ -39,7 +39,9 @@ router.post('/', (req, res) => {
   */
   console.log(sampleFile);
 
-    res.download('ftp/uploadedFiles/'+sampleFile.name, function(err) {
+  res.download('ftp/uploadedFiles/'+sampleFile.name, function(err) {
+//    res.download(__dirname+'/uploadedFiles/'+sampleFile.name, function(err) {
+  //  res.download(sampleFile.name, options, function(err) {
       if (err) {
         console.log(err);
         res.redirect('/');
