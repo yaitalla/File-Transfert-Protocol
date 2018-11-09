@@ -1,0 +1,6 @@
+{
+  "secret": "superkangourou",
+  "refreshSecret": "superpoissonfrais",
+  "tokenLife": 900,
+  "refreshTokenLife": 9000
+}
