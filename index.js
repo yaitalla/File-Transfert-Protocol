@@ -1,13 +1,19 @@
 const express = require('express');
+const fileupload = require('express-fileupload');
 const bodyParser = require('body-parser');
 const routes = require('./routes/ftp');
+const authroute = require('./routes/auth');
+const countroute = require('./routes/count');
 const helmet = require('helmet');
 const app = express();
 
 app.use(helmet());
+app.use(fileupload());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use('/auth', authroute);
 app.use('/ftp', routes);
+app.use('/count', countroute);
 app.use(express.static('./static'));
 
 

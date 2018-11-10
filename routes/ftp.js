@@ -1,32 +1,19 @@
 const express = require('express');
 const router = express.Router();
-const Usertoken = require('../config/conf');
 const fs = require('fs');
 
-
-
-//Middleware function
-const uploadToken = (req, res, next) => {
-  if (req.headers['token'] !== Usertoken) {  //req.headers['token'] ??
-    console.log('Tried to upload with Bad Token');
-    return res.sendStatus(400).json({
-      message: 'Tried to upload with Bad Token'
-    });
-    next();
-  }
-}
 
 const getHeaders = (req, res, next) => {
 	// POURQUOI ?
   if (req.headers['content-type'] === undefined)
     console.log(req.headers);
   else
-    console.log(req.headers['content-type']);
+    console.log(req.headers);
   next();
 }
 
 //router.use(uploadToken);
-router.use(getHeaders);
+//router.use(getHeaders);
 
 
 function isEmpty(obj) {
@@ -43,8 +30,9 @@ router.get('/', (req, res) => {
   });
 });
 
-router.post('/upload', (req, res) => {
+router.post('/upload', getHeaders, (req, res) => {
   if (isEmpty(req.files)) {
+    console.log('no file')
     res.redirect('/');
   } else {
     const srcName = Object.getOwnPropertyNames(req.files)[0];
