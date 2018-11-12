@@ -5,6 +5,7 @@ const jwt = require('jsonwebtoken');
 const tokenList = {};
 
 //Midlewrare function
+// miDDleWARE
 const tokenChecker = (req, res, next) => {
   const token = req.headers['x-access-token'] // || req.query.token || req.body.token
   if (token) {
