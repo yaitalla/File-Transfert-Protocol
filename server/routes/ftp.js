@@ -3,18 +3,6 @@ const router = express.Router();
 const fs = require('fs');
 
 
-const getHeaders = (req, res, next) => {
-	// POURQUOI ?
-  if (req.headers['content-type'] === undefined)
-    console.log(req.headers);
-  else
-    console.log(req.headers);
-  next();
-}
-
-//router.use(uploadToken);
-//router.use(getHeaders);
-
 
 function isEmpty(obj) {
     for(var key in obj) {

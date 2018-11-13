@@ -1,6 +1,3 @@
 node_modules/
 package-lock.json
 data/
-data/journal/prealloc.1
-data/journal/prealloc.2
-data/journal/prealloc.0
