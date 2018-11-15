@@ -9,19 +9,21 @@ const tokenChecker = (req, res, next) => {
   if (token) {
     jwt.verify(token, config.secret, (err, decoded) => {
       if (err) {
-        return res.status(401).json({
+        console.log({
           "error": true,
           "message": 'Unauthorized access.'
         });
+        res.redirect('/login');
       }
       req.decoded = decoded;
       next();
     });
   } else { //pas de token
-    return res.status(403).send({
+    console.log({
       "error": true,
-      "message": 'No token provided.'
+      "message": 'Unauthorized access.'
     });
+    res.redirect('/login');
   }
 }
 

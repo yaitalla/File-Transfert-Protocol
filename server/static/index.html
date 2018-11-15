@@ -3,23 +3,13 @@
 <title>Upload file</title>
 </head>
 <body>
-  <div>
-    <form method="post" action="/ftp/upload" enctype="multipart/form-data">
-      <input type="file" name="sampleFile"/>
-      <button type="submit" name="press" value="UPLOAD">Upload File</button>
-    </form>
-  </div>
-  <div>
-    <form method="post" action="/ftp/download" enctype="multipart/form-data">
-      <button type="file" name="" value="dfile">Download Picture</button>
-    </form>
-  </div>
-  <form method="get" action="/ftp/getUploadedFiles" enctype="multipart/form-data">
-    <button type="file" name="" value="gfile">Uploaded Files</button>
-  </form>
-  <div>
-    <form method="post" action="/auth/login" enctype="multipart/form-data">
+
+  <div style="container">
+    <form method="post" action="/auth/token" enctype="multipart/form-data">
       <button type="file" name="" value="dfile">test token</button>
+    </form>
+    <form method="post" action="/auth/login" enctype="multipart/form-data">
+      <button type="file" name="" value="dfile">login</button>
     </form>
   </div>
   <div>
@@ -31,8 +21,3 @@
 
 </body>
 </html>
-
-
-<!--
-  pourquoi tu met 'multipart/form-data' partout ?
--->

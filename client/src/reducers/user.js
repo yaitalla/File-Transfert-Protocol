@@ -8,8 +8,9 @@ const setUsers = (state, action) => ({
 });
 
 const userReducer = (state = INITIAL_STATE, action) => {
-  if (action.type === 'USERS_SET') {
-    return setUsers(state, action);
+  switch (action.type) {
+    case 'SET_USER':
+      return setUsers(state, action);
   }
   return state;
 };

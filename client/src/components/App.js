@@ -9,6 +9,7 @@ const App = () =>
   <Landing authUser={}/>
   <Route exact path={'/home'} component={Home}/>
   <Route exact path={'/landing'} component={Landing}/>
+  <Route exact path={'/login'} component={Login}/>
 </Router>
 
 export default App;
