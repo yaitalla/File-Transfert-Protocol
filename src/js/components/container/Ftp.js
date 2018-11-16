@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Home = () =>
+const Ftp = () =>
 <div style="container">
   <form method="post" action="/ftp/upload" enctype="multipart/form-data">
     <button type="file" name="" value="dfile">upload file</button>
@@ -11,4 +11,4 @@ const Home = () =>
   </form>
 </div>
 
-export default Home;
+export default Ftp;
