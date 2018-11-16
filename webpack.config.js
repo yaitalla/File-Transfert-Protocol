@@ -10,10 +10,11 @@ module.exports = {
 	//result
 	output: {
 		path: path.join(__dirname, '/client/dist/'),
-		filename: 'app.js',
+		filename: 'main.js',
 	},
 	module: {
 		loaders: [{
+			test: /\.js$/,
 			include: path.join(__dirname, '/client/src'),
 			loader: 'babel-loader',
 			query: {

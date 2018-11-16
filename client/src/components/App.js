@@ -1,15 +1,20 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import Landing from './Landing';
-import Home from './Home';
-import Login from './Login';
+import { PropTypes } from 'prop-types';
+import { Link, IndexLink } from 'react-router';
 
-const App = () =>
-<Router>
-  <Landing authUser={}/>
-  <Route exact path={'/home'} component={Home}/>
-  <Route exact path={'/landing'} component={Landing}/>
-  <Route exact path={'/login'} component={Login}/>
-</Router>
+const App = ({ children }) => (
+  <div>
+  <div className="top-bar">
+    <div className="top-bar-left">
+      <IndexLink to="/">Whis</IndexLink>
+    </div>
+    <div className="top-bar-right">
+      <Link to="/login">Log In</Link>
+      <Link to="/home">Home</Link>
+    </div>
+  </div>
+  {children}
+</div>
+)
 
 export default App;

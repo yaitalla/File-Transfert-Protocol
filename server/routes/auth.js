@@ -7,7 +7,7 @@ const tokenList = {};
 //Midlewrare function
 // miDDleWARE
 const tokenChecker = (req, res, next) => {
-  const token = req.headers['x-access-token'] // || req.query.token || req.body.token
+  const token = req.headers['x-access-token'] || req.headers['authorization'] // || req.query.token || req.body.token
   if (token) {
     jwt.verify(token, config.secret, (err, decoded) => {
       if (err) {
