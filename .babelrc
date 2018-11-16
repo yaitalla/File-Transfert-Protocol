@@ -1,1 +1,1 @@
-{"preset": ["env", "react"]}
+{"preset": ["env", "es2015"]}
