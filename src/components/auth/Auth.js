@@ -1,30 +1,32 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
-import AuthForm from '../presentational/AuthForm';
+import { withRouter } from 'react-router-dom';
+import AuthForm from './AuthForm';
 
-class Auth extends React.Component {
-	constructor(/*props*/) {
-		super(/*props*/);
+
+const Auth = ({ history }) =>
+<div>
+	<AuthPage history={history} />
+</div>
+
+
+class AuthPage extends React.Component {
+	constructor(props) {
+		super(props);
 
 		this.state = {
 			errors: {},
 			user : {
 				email: '',
-				name: '',
 				password: '',
 			}
 		};
-		this.processForm = this.processForm.bind(this);
-		this.updateUser = this.updateUser.bind(this);
 	}
 
 	processForm(event) {
-	//	event.preventDefault();
-		/*
-		console.log('name:', this.state.user.name);
+		event.preventDefault();
 		console.log('email:', this.state.user.email);
 		console.log('password:', this.state.user.password);
-		*/
 	}
 
 	updateUser(event) {
@@ -45,4 +47,4 @@ class Auth extends React.Component {
 	}
 }
 
-export default Auth;
+export default withRouter(Auth);
