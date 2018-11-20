@@ -10,7 +10,8 @@ const css = {
     flexDirection: "row"
   },
   item: {
-    flexGrow: 0
+    flexDirection: "row"
+
   }
 }
 

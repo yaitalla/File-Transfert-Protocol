@@ -7,13 +7,13 @@ const Navigation = () =>
 //<div style={css.}></div>
 <div style={css.container}>
   <ul style={css.noBullet}>
-    <li>
+    <li style={css.item}>
       <Link to={'/'}>home <span></span> </Link>
     </li>
-    <li>
+    <li style={css.item}>
       <Link to={'/signup'}>signup <span></span> </Link>
     </li>
-    <li>
+    <li style={css.item}>
       <Link to={'/ftp'}>ftp <span></span> </Link>
     </li>
   </ul>
