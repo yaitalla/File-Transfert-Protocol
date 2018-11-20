@@ -1,6 +1,10 @@
-import App from "./components/global/App";
+import Global from "./components/global/Global";
 import ReactDOM from "react-dom";
 import React from 'react';
+//import { Router } from 'react-router';
 
 
-ReactDOM.render(<App/>, document.getElementById('whis'));
+
+ReactDOM.render((
+  <Global/>
+), document.getElementById('whis'));

@@ -42,7 +42,7 @@ const css = {
   "joinBtn": {
     border: "1px solid rgba(10, 180, 180, 1)",
     background: "rgba(20, 20, 20, .6)",
-    "fontSize": "18px",
+    "font-size": "18px",
     color: "white",
     "margin-top": "20px",
     padding: "10px 50px",
