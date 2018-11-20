@@ -1,17 +1,12 @@
 const css = {
   container: {
-    backgroundColor: "#ddd"
-  },
-  noBullet: {
     listStyleType: "none",
     "display": "flex",
-    flexDirection: "row",
+    flexDirection: "column",
     "justifyContent": "center"
-
   },
   item: {
-    flexDirection: "row",
-    margin: "25px"
+    margin: "100px"
   }
 }
 
