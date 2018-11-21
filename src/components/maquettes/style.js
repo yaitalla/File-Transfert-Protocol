@@ -6,13 +6,13 @@ export const flexContainer = {
 
 }
 export const flexHeader = {
+  maxWidth: "80%",
   flexDirection: "row",
   justifyContent: "space-around",
   display: "flex",
   listStyleType: "none",
-  alignContent: "flexStart",
-  alignItems: "spaceAround",
-//🠻
+  alignContent: "flex-start",
+  alignItems: "center"
 }
 export const flexUl = {
   listStyleType: "none",
@@ -26,12 +26,15 @@ export const item = {
 }
 
 export const btnStyle = { //boutton valider
+  color: "white",
   textAlign: "center",
   transition: ".4s",
   fontSize: "18px",
   borderRadius: "40px",
+  width: "200px",
+  height: "45px",
   cursor: "pointer",
-  backgroundColor: "rgb(142, 188, 115)"
+  backgroundColor: "rgb(149, 120, 204)"
 }
 export const btnStyles = { //boutton retour
   textAlign: "center",

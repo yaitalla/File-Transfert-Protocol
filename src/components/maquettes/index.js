@@ -12,11 +12,10 @@ const Maquette = () =>
   <div style={flexBody}>
       <ul style={flexUl}>
         <li style={item}>
-          <h4>Ecrivez des trucs</h4>
-        </li>
-        <li style={item}>
           <div>
-            <input style={{"height": "80px", "width": "400px"}} type="textarea"/>
+            <h4>🠻 Your password is different</h4>
+
+            <input style={{"height": "80px", "width": "60%", "backgroundColor": "rgb(242, 242, 242)"}} type="textarea"/>
           </div>
         </li>
         <br/>
