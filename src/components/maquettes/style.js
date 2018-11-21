@@ -1,14 +1,13 @@
 export const flexContainer = {
   textAlign: "center",
   display: "flex",
-  justifyContent: "spaceBetween",
   border: "1px solid silver",
   flexDirection: "column",
 
 }
 export const flexHeader = {
   flexDirection: "row",
-  justifyContent: "spaceEvenly",
+  justifyContent: "space-around",
   display: "flex",
   listStyleType: "none",
   alignContent: "flexStart",
