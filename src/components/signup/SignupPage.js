@@ -1,21 +1,19 @@
 import React from 'react';
 //import Form from './Form';
 //import auth from '../../../config/database/auth';
-import AuthForm from '../auth/AuthForm';
+import Form from './Form';
 
 const SignUpPage = ({ history }) =>
   <div>
-    <h2>Register to get access</h2>
     <SignupForm history={history}/>
-    <hr/>
-    <br/>
   </div>
 
 class SignupForm extends React.Component {
   constructor(props) {
     super(props);
+
     this.state = {
-      userData: {
+      user: {
         email: '',
         password: ''
       },
@@ -33,19 +31,19 @@ class SignupForm extends React.Component {
     event.preventDefault();
   };
 
-  updateStateOnChange(){
+  updateStateOnChange(event){
     const propertyName = event.target.name;
-		const userData = this.state.user;
+		const user = this.state.user;
 		userData[propertyName] = event.target.value;
-		this.setState({ userData });
+		this.setState({ user });
   }
   render() {
 		return (
-			<AuthForm
+			<Form
 				onSubmit={this.handleSubmit}
 				onChange={this.updateStateOnChange}
 				errors={this.state.error}
-				user={this.state.userData}/>
+				user={this.state.user}/>
 		);
 	}
 }

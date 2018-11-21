@@ -56,7 +56,6 @@ const css = {
     */
   },
   signupSection: {
-   background: "url(https://source.unsplash.com/TV2gg2kZD1o/1600x800)",
     backgroundRepeat: "no-repeat",
     position: "absolute",
     top: "50%",
