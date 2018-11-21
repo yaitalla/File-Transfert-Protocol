@@ -1,5 +1,5 @@
 import React from 'react';
-import { flexContainer, flexUl, item, btnStyle} from './style';
+import { flexContainer, flexUl, item, btnStyle, btnStyles} from './style';
 
 const Box = () =>
 <div style={flexContainer}>
@@ -15,8 +15,11 @@ const Box = () =>
     <li style={item}>
       <input type="checkbox" /> I accept Terms of services<br/>
     </li>
-    <li style={btnStyle}>
-      <button>Button</button>
+    <li style={item}>
+      <button style={btnStyle}>Button</button>
+    </li>
+    <li style={item}>
+      <button style={btnStyles}>other Button</button>
     </li>
   </ul>
 </div>

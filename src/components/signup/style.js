@@ -6,6 +6,10 @@ export const container = {
   boxShadow: "3px 10px 20px 5px rgba(0, 0, 0, .5)",
 
 };
+
+export const titleStyle = {
+  fontWeight: 'bold',
+};
 export const nobullet = {
   listStyleType: "none",
   display: "flex",
@@ -30,7 +34,7 @@ export const btnStyle = {
   display: "flex",
   alignItems: "center",
   "fontSize": "18px",
-  width: "120px",
+  width: "100%",
   cursor: "pointer",
   border: "2px solid rgba(10, 180, 180, 1)",
 };

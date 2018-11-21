@@ -1,15 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import css from './style.js';
+import { container, item, btn } from './style';
 
 
 const Ftp = () => (
-  <div style={css.container}>
-    <form style={css.item} method="post" action="/ftp/upload" encType="multipart/form-data">
-      <button type="file" name="" value="dfile">upload file</button>
+  <div style={container}>
+    <h2 style={{"font": "bold"}}>File Transfert</h2>
+    <form method="post" action="/ftp/upload" encType="multipart/form-data">
+      <button style={btn} type="file" name="" value="dfile">upload file</button>
     </form>
-    <form style={css.item} method="post"  encType="multipart/form-data">
-      <button type="file" name="" value="dfile">download picture</button>
+    <form method="post"  encType="multipart/form-data">
+      <button style={btn} type="file" name="" value="dfile">download picture</button>
     </form>
   </div>
 )

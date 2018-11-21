@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import css from './style.js';
+import { btnStyle, btnStyles, btn } from './styles';
 
 const Navigation = () =>
 
@@ -10,13 +11,19 @@ const Navigation = () =>
   </div>
   <ul style={css.noBullet}>
     <li style={css.item}>
-      <Link to={'/'}><span> home </span> </Link>
+      <Link to={'/'}><button style={btnStyle}> home </button> </Link>
     </li>
     <li style={css.item}>
-      <Link to={'/signup'}><span> signup </span> </Link>
+      <Link to={'/signup'}><button style={btnStyles}> signup </button> </Link>
     </li>
     <li style={css.item}>
-      <Link to={'/ftp'}><span> ftp </span> </Link>
+      <Link to={'/ftp'}><button style={btn}> ftp </button> </Link>
+    </li>
+    <li style={css.item}>
+      <Link to={'/maquette1'}><button style={btn}>maket1</button> </Link>
+    </li>
+    <li style={css.item}>
+      <Link to={'/maquette2'}><button style={btn}>maket2</button> </Link>
     </li>
   </ul>
 </div>

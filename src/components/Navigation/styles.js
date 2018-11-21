@@ -1,20 +1,3 @@
-export const flexContainer = {
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  alignContent: "flexItems",
-  border: "1px solid silver",
-}
-export const flexUl = {
-  listStyleType: "none",
-  alignContent: "SpaceAround",
-  justifyContent: "SpaceAround",
-
-}
-export const item = {
-  textAlign: "center"
-}
-
 export const btnStyle = {
   textAlign: "center",
   transition: ".4s",
@@ -32,4 +15,14 @@ export const btnStyles = {
   width: "100%",
   borderRadius: "40px",
   backgroundColor: "rgb(174, 131, 198)"
+}
+
+export const btn = {
+  textAlign: "center",
+  transition: ".4s",
+  fontSize: "18px",
+  cursor: "pointer",
+  width: "100%",
+  borderRadius: "40px",
+  backgroundColor: "rgb(123, 237, 220)"
 }

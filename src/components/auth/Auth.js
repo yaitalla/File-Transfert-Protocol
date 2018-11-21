@@ -20,6 +20,9 @@ class AuthPage extends React.Component {
 				password: '',
 			}
 		};
+
+		this.updateUser = this.updateUser.bind(this);
+		this.processForm = this.processForm.bind(this);
 	}
 
 	processForm(event) {

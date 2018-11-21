@@ -19,6 +19,8 @@ class SignupForm extends React.Component {
       },
       error: {},
     };
+    this.updateStateOnChange = this.updateStateOnChange.bind(this);
+		this.handleSubmit = this.handleSubmit.bind(this);
   }
   handleSubmit(event) {
     const {
@@ -34,7 +36,7 @@ class SignupForm extends React.Component {
   updateStateOnChange(event){
     const propertyName = event.target.name;
 		const user = this.state.user;
-		userData[propertyName] = event.target.value;
+		user[propertyName] = event.target.value;
 		this.setState({ user });
   }
   render() {
