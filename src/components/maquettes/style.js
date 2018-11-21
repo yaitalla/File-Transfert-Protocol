@@ -12,7 +12,7 @@ export const flexHeader = {
   listStyleType: "none",
   alignContent: "flexStart",
   alignItems: "spaceAround",
-
+//🠻
 }
 export const flexUl = {
   listStyleType: "none",
@@ -25,7 +25,7 @@ export const item = {
   textAlign: "center"
 }
 
-export const btnStyle = {
+export const btnStyle = { //boutton valider
   textAlign: "center",
   transition: ".4s",
   fontSize: "18px",
@@ -33,11 +33,11 @@ export const btnStyle = {
   cursor: "pointer",
   backgroundColor: "rgb(142, 188, 115)"
 }
-export const btnStyles = {
+export const btnStyles = { //boutton retour
   textAlign: "center",
   boxShadow: "3px 10px 20px 5px rgba(0, 0, 0, .5)",
   fontSize: "30px",
   cursor: "pointer",
   borderRadius: "50px",
-  backgroundColor: "rgb(193, 142, 38)"
+  backgroundColor: "rgb(242, 242, 242)"
 }

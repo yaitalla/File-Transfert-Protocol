@@ -6,7 +6,7 @@ const Maquette = () =>
 
   <div style={flexHeader}>
     <button style={btnStyles}> Back</button>
-    <h1>Regardez toutes ces belles maquettes</h1>
+    <h2 style={{"color": "rgb(70, 164, 201)"}}>Enter your seedphrase in the box below.</h2>
   </div>
 
   <div style={flexBody}>
@@ -20,11 +20,9 @@ const Maquette = () =>
           </div>
         </li>
         <br/>
+
         <li style={item}>
-          <input type="checkbox" /> I accept Terms of services<br/>
-        </li>
-        <li style={item}>
-          <button style={btnStyle}>Button</button>
+          <button style={btnStyle}>Validate</button>
         </li>
       </ul>
   </div>

@@ -5,15 +5,19 @@ const Box = () =>
 <div style={flexContainer}>
   <ul style={flexUl}>
     <li style={item}>
-      <h2>Title</h2>
+      <h1>Title</h1>
     </li>
     <li style={item}>
-      <div>Buy & sell crypto for cash.</div>
+      <div style={{"font": "bold"}}>Buy & sell crypto for cash.</div>
       <div>Spend it at physical stores.</div>
     </li>
     <br/>
     <li style={item}>
-      <input type="checkbox" /> I accept Terms of services<br/>
+      <div style={{"backgroundColor": "rgb(242, 242, 242)", "borderRadius": "10px"}}>
+        <input type="checkbox" /> I accept Terms of services..<br/>
+        <a href="/">Read the terms</a>
+      </div>
+      <br/>
     </li>
     <li style={item}>
       <button style={btnStyle}>Button</button>
