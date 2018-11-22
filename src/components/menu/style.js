@@ -5,6 +5,20 @@ export const flexContainer = {
   flexDirection: "column",
   alignItems: "center"
 }
+
+export const lstyle = {
+  borderRadius: "10px",
+  "paddingTop": "6px",
+  "paddingBottom": "6px",
+  "paddingRight": "6px",
+  "paddingLeft": "6px",
+  backgroundColor: "rgb(109, 146, 206)",
+  color: "white",
+  cursor: "pointer",
+  maxHeight: "30px",
+  alignSelf: "auto",
+  margin: "auto"
+}
 export const flexHeader = {
   color: "rgb(70, 164, 201)"
 }

@@ -1,11 +1,16 @@
 import React from 'react';
-import { flexContainer, flexUl, item, btnStyle, btnStyles} from './style';
+import { flexContainer, pstyle, flexUl, item, btnStyle, btnStyles} from './style';
 
 const Box = () =>
 <div style={flexContainer}>
+
   <ul style={flexUl}>
+
     <li style={item}>
-      <h1>Title</h1>
+    <div style={{"display": "flex", "justifyContent": "flex-end"}}>
+    <p style={pstyle}>BETA</p>
+    </div>
+      <h1>Dether.</h1>
     </li>
     <li style={item}>
       <div style={{"font": "bold"}}>Buy & sell crypto for cash.</div>
@@ -20,7 +25,7 @@ const Box = () =>
       <br/>
     </li>
     <li style={item}>
-      <button style={btnStyle}>Button</button>
+      <button style={btnStyle}>Create your wallet</button>
     </li>
     <li style={item}>
       <button style={btnStyles}>other Button</button>
