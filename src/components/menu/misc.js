@@ -5,7 +5,7 @@ import ButtonDiv from './buttons';
 const Misc = () =>
 <div style={flexContainer}>
     <h2 style={flexHeader}>Your seedphrase<br/> has been created!</h2>
-    <h5>(Les bouttons bleus sont des lien vers d'autres maquettes)</h5>
+    <h5>(Les bouttons bleus sont des lien vers d autres maquettes)</h5>
     <ButtonDiv/>
   <div>
       <ul style={flexUl}>

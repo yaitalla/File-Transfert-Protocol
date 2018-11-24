@@ -12,12 +12,26 @@ export const item = {
   textAlign: "center"
 }
 
+export const flexdiv = {
+  display: "flex",
+  justifyContent: "flex-end"
+}
+
+export const bolder = {
+  font: "bold"
+}
+
+export const grey = {
+  backgroundColor: "rgb(242, 242, 242)",
+  borderRadius: "10px"
+}
+
 export const pstyle = {
-  border: "1px solid silver",
+  border: "1px solid #6868ff",
   width: "35px",
   fontSize: "10px",
   textAlign: "center",
-
+  color: "rgb(104, 104, 255)"
 }
 
 export const btnStyle = { //create your wallet btn

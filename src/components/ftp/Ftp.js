@@ -5,7 +5,7 @@ import { container, item, btn } from './style';
 
 const Ftp = () => (
   <div style={container}>
-    <h2 style={{"font": "bold"}}>File Transfert</h2>
+    <h2 style={item}>File Transfert</h2>
     <form method="post" action="/ftp/upload" encType="multipart/form-data">
       <button style={btn} type="file" name="" value="dfile">upload file</button>
     </form>

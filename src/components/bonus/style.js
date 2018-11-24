@@ -1,6 +1,7 @@
 export const flexContainer = {
   display: "flex",
   justifyContent: "space-around",
+  border: "1px solid silver",
   flexDirection: "column",
 }
 
@@ -10,7 +11,7 @@ export const h2style = {
 export const flexHeader = {
   maxWidth: "80%",
   flexDirection: "row",
-  justifyContent: "space-between",
+  justifyContent: "space-around",
   display: "flex",
   listStyleType: "none",
   alignContent: "flex-start",
@@ -43,8 +44,10 @@ export const flexinput = {
   "backgroundColor": "rgb(242, 242, 242)",
   "paddingTop": "6px",
   "paddingBottom": "6px",
-  marginTop: "5px",
-  marginBottom: "5px"
+  height: "30px",
+  borderRadius: "10px",
+  width: "300px",
+  fontSize: "16px"
 }
 
 export const item = {
@@ -56,6 +59,15 @@ export const item = {
   "paddingRight": "6px",
   "paddingLeft": "6px",
 }
+export const title = {
+  textAlign: "center"
+}
+
+export const input = {
+  height: "100px",
+  width: "300px",
+  "backgroundColor": "rgb(242, 242, 242)"
+}
 
 export const btnStyle = { //boutton valider
   color: "white",
@@ -63,7 +75,7 @@ export const btnStyle = { //boutton valider
   transition: ".4s",
   fontSize: "16px",
   borderRadius: "40px",
-  width: "200px",
+  width: "250px",
   height: "45px",
   cursor: "pointer",
   backgroundColor: "rgb(149, 120, 204)"

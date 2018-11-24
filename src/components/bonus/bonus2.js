@@ -1,14 +1,15 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import {
   flexContainer, flexUl, item, flexinput,
-  btnStyle, btnStyles, flexdiv,
+  btnStyle, btnStyles, flexdiv, title,
   flexHeader, flexBody, h2style } from './style';
 
 const Bonus2 = () =>
 <div style={flexContainer}>
 
   <div style={flexHeader}>
-    <button style={btnStyles}> Back</button>
+    <Link to={'/menu'}><button style={btnStyles}> Back</button></Link>
     <h2 style={h2style}>Create a secure password to encrypt your wallet.</h2>
   </div>
 
@@ -24,8 +25,10 @@ const Bonus2 = () =>
           </div>
         </li>
         <div style={flexdiv}>
-          <input style={flexinput} type="password"/>
-          <input style={flexinput} type="password"/>
+          <h5>↓ Your password is different</h5>
+          <input style={flexinput} type="password" placeholder='  Password'/>
+          <h5>↓ Your password is different</h5>
+          <input style={flexinput} type="password"placeholder='  Confirm your Password'/>
         </div>
 
         <br/>

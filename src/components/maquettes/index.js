@@ -1,21 +1,22 @@
 import React from 'react';
-import { flexContainer, flexUl, item, btnStyle, btnStyles, flexHeader, flexBody} from './style';
+import { Link } from 'react-router-dom';
+import { flexContainer, input, flexUl, item, btnStyle, btnStyles, flexHeader, title} from './style';
 
 const Maquette = () =>
 <div style={flexContainer}>
 
   <div style={flexHeader}>
-    <button style={btnStyles}> Back</button>
-    <h2 style={{"color": "rgb(70, 164, 201)"}}>Enter your seedphrase in the box below.</h2>
+    <Link to={'/menu'}><button style={btnStyles}> Back</button></Link>
+    <h2 style={title}>Enter your seedphrase in the box below.</h2>
   </div>
 
-  <div style={flexBody}>
+  <div>
       <ul style={flexUl}>
         <li style={item}>
           <div>
-            <h4>🠻 Your password is different</h4>
+            <h4>↓ Your password is different</h4>
 
-            <input style={{"height": "80px", "width": "60%", "backgroundColor": "rgb(242, 242, 242)"}} type="textarea"/>
+            <input style={input} type="textarea"/>
           </div>
         </li>
         <br/>

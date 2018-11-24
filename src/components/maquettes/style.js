@@ -1,5 +1,5 @@
 export const flexContainer = {
-  textAlign: "center",
+  justifyContent: "space-around",
   display: "flex",
   border: "1px solid silver",
   flexDirection: "column",
@@ -18,8 +18,14 @@ export const flexUl = {
   listStyleType: "none",
 
 }
-export const flexBody = {
-
+export const input = {
+  height: "80px",
+  width: "60%",
+  borderRadius: "10px",
+  backgroundColor: "rgb(242, 242, 242)",
+}
+export const title = {
+  color: "rgb(70, 164, 201)"
 }
 export const item = {
   textAlign: "center"
@@ -31,7 +37,7 @@ export const btnStyle = { //boutton valider
   transition: ".4s",
   fontSize: "18px",
   borderRadius: "40px",
-  width: "200px",
+  width: "250px",
   height: "45px",
   cursor: "pointer",
   backgroundColor: "rgb(149, 120, 204)"

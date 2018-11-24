@@ -1,7 +1,7 @@
 import React from 'react';
 import {
   flexContainer, flexUl, item,
-  btnStyle, btnStyles,
+  btnStyle, btnStyles, title, input,
   flexHeader, flexBody } from './style';
 
 const Bonus1 = () =>
@@ -9,16 +9,16 @@ const Bonus1 = () =>
 
   <div style={flexHeader}>
     <button style={btnStyles}> Back</button>
-    <h2 style={{"color": "rgb(70, 164, 201)"}}>Enter your seedphrase in the box below.</h2>
+    <h2 style={title}>Enter your seedphrase in the box below.</h2>
   </div>
 
   <div style={flexBody}>
       <ul style={flexUl}>
         <li style={item}>
           <div>
-            <h4>🠻 Your password is different</h4>
+            <h4>↓ Your password is different</h4>
 
-            <input style={{"height": "80px", "width": "60%", "backgroundColor": "rgb(242, 242, 242)"}} type="textarea"/>
+            <input style={input} type="textarea"/>
           </div>
         </li>
         <br/>

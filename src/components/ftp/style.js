@@ -16,3 +16,7 @@ export const btn = {
   borderRadius: "40px",
   cursor: "pointer",
 }
+
+export const item = {
+  font: "bold"
+}
