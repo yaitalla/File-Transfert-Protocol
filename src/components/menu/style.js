@@ -6,19 +6,14 @@ export const flexContainer = {
   alignItems: "center"
 }
 
-export const lstyle = {
-  borderRadius: "10px",
-  "paddingTop": "6px",
-  "paddingBottom": "6px",
-  "paddingRight": "6px",
-  "paddingLeft": "6px",
-  backgroundColor: "rgb(109, 146, 206)",
-  color: "white",
-  cursor: "pointer",
-  maxHeight: "30px",
-  alignSelf: "auto",
-  margin: "auto"
+export const flexbtn = {
+  width: "80%",
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center"
+
 }
+
 export const flexHeader = {
   color: "rgb(70, 164, 201)"
 }
@@ -26,29 +21,40 @@ export const flexUl = {
   listStyleType: "none",
   display: "flex",
   flexDirection: "column",
-  alignItems: "center"
+  alignItems: "center",
+  justifyContent: "center"
+  
 }
 
 export const oneBTNstyle = {
-  borderRadius: "10px",
-  "paddingTop": "6px",
-  "paddingBottom": "6px",
-  "paddingRight": "6px",
-  "paddingLeft": "6px",
+  borderRadius: "20px",
+  padding: "6px",
   backgroundColor: "rgb(168, 168, 168)",
   color: "white",
   cursor: "pointer",
-  maxHeight: "30px",
+  height: "40px",
+  width: "80px",
   alignSelf: "auto",
   margin: "auto"
 }
 
+export const lstyle = {
+  borderRadius: "20px",
+  height: "40px",
+  width: "80px",
+  padding: "6px",
+  backgroundColor: "rgb(109, 146, 206)",
+  color: "white",
+  cursor: "pointer",
+  alignSelf: "auto",
+  margin: "auto"
+}
 export const btndiv = {
   display: "flex",
-  alignContent: "center",
   justifyContent: "space-around",
+  flexDirection: "row",
   flexFlow: "row wrap",
-  width: '300px',
+  width: '100%',
   marginTop: "8px",
 }
 

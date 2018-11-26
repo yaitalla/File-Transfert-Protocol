@@ -2,5 +2,6 @@
   "secret": "superkangourou",
   "refreshSecret": "superpoissonfrais",
   "tokenLife": 900,
-  "refreshTokenLife": 9000
+  "refreshTokenLife": 9000,
+  "DB": "mongodb://localhost:27017/whis"
 }

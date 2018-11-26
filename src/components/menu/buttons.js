@@ -1,9 +1,10 @@
 import React from 'react';
-import { oneBTNstyle, btndiv, lstyle } from './style';
+import { oneBTNstyle, btndiv, lstyle, flexbtn } from './style';
 import { Link } from 'react-router-dom';
 
 const ButtonDiv = () =>
-<div>
+<div style={flexbtn}>
+
   <div style={btndiv}>
     <button style={oneBTNstyle}>Cuisine</button>
     <Link to={'/maquette1'}>
@@ -35,6 +36,6 @@ const ButtonDiv = () =>
   <br/>
   </div>
 
-  </div>
+</div>
 
 export default ButtonDiv;

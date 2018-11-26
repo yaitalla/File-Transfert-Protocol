@@ -1,7 +1,8 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
 import { Link } from 'react-router';
-import css from './Form.js';
+import { flexForm, flexUl, formTitle, input, submitBtn,
+		flexContainer, flexInfo, infoTitle } from './style';
 
 const AuthForm = ({
 	onSubmit,
@@ -9,43 +10,46 @@ const AuthForm = ({
 	errors,
 	user
 }) => (
-		<div style={css.signupSection}>
-			<div style={css.info}>
-	    <h2>Welcome to Whis</h2>
-	    <i style={css.icon}  aria-hidden="true"></i>
-	    <p>Digital consulting</p>
-	  </div>
-			<form style={css.signupForm} onSubmit={onSubmit}>
-			<ul style={css.noBullet}>
-				<li>
-					<h4 >Authentication</h4>
-				</li>
-				<li>
-					<div>
-					<input
-						style={css.inpuFields}
-						label="Email"
-						name="email"
-						onChange={onChange}
-						value={user.email}/>
-					</div>
-				</li>
-				<li>
-					<div>
-					<input
-						style={css.inpuFields}
-						label="Password"
-						type="password"
-						name="password"
-						onChange={onChange}
-						value={user.password}/>
-					</div>
-				</li>
-			</ul>
-			<button style={css.joinbtn} type="submit"  primary="true">
-				Submit
-			</button>
+
+	<div style={flexContainer}>
+			<form  style={flexForm} onSubmit={onSubmit}>
+				<ul style={flexUl}>
+					<li>
+						<h4 style={formTitle} >Authentication</h4>
+					</li>
+					<li>
+						<input
+							placeholder="Email..."
+							style={input}
+							label="Email"
+							name="email"
+							onChange={onChange}
+							value={user.email}/>
+					</li>
+					<li>
+						<input
+							style={input}
+							placeholder="Password..."
+							label="Password"
+							type="password"
+							name="password"
+							onChange={onChange}
+							value={user.password}/>
+					</li>
+					<li>
+						<button style={submitBtn} type="submit"  primary="true">
+							Submit
+						</button>
+					</li>
+				</ul>
+
 			</form>
+
+				<div style={flexInfo}>
+					<h2 style={infoTitle}>Welcome to Whis</h2>
+					<i  aria-hidden="true"></i>
+					<p>Digital consulting</p>
+				</div>
 	</div>
 
 );

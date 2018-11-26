@@ -10,11 +10,12 @@ const Navigation = () =>
   <div>
   </div>
   <ul style={css.noBullet}>
-    <li style={css.item}>
-      <Link to={'/'}><button style={btnStyle}> home </button> </Link>
-    </li>
+
     <li style={css.item}>
       <Link to={'/ftp'}><button style={btnStyles}> ftp </button> </Link>
+    </li>
+    <li style={css.item}>
+      <Link to={'/signup'}><button style={btnStyle}> signup </button> </Link>
     </li>
     <li style={css.item}>
       <Link to={'/menu'}><button style={btn}>maquettes</button> </Link>
