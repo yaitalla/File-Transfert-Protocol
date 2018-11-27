@@ -12,6 +12,7 @@ const Global = () =>
   <Router>
     <div>
       <Navigation/>
+      <Auth/>
       <Route exact path={'/signup'} component={Auth}/>
       <Route exact path={'/menu'} component={Menu}/>
       <Route exact path={'/ftp'} component={Ftp}/>

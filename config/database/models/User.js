@@ -2,8 +2,19 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const userSchema = new Schema({
-  email: String,
-  password: String,
+  emil: {
+    type: String,
+    unique: true,
+    required: true
+  },
+  hashpass: {
+    type: String,
+    required: true
+  },
+  createdDate: {
+    type: Date,
+    default: Date.now
+  },
   token: String,
   uploads: Number,
   downloads: Number,

@@ -12,7 +12,7 @@ const AuthForm = ({
 }) => (
 
 	<div style={flexContainer}>
-			<form  style={flexForm} onSubmit={onSubmit}>
+			<form  style={flexForm} onSubmit={onSubmit} method="post" action="/users/register">
 				<ul style={flexUl}>
 					<li>
 						<h4 style={formTitle} >Authentication</h4>

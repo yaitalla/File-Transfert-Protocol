@@ -5,6 +5,9 @@ const upload = require('express-fileupload');
 const ftp = require('./server/routes/ftp');
 const app = express();
 const helmet = require('helmet');
+const errorHandler = require('./config/errorHandler');
+const jwt = require('./config/token');
+const users = require('./server/routes/users');
 
 mongoose.Promise = global.Promise;
 mongoose.connect("mongodb://localhost:27017/whis", { useNewUrlParser: true}).then(
@@ -18,6 +21,8 @@ app.use(bodyParser.json());
 app.use(upload());
 app.use(express.static('./dist/'));
 app.use('/ftp', ftp);
+app.use('/users', users);
+app.use(errorHandler);
 /*
 app.get('/', (req, res) => {
   res.send('hello');

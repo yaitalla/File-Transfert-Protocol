@@ -1,73 +1,25 @@
-const config = require('./config');
-const jwt = require('jsonwebtoken');
-const tokenList = {};
+const expressJwt = require('express-jwt');
+const userHandling = require('./database/users/userHandling');
 
-//Midlewrare function
-// miDDleWARE
-const tokenChecker = (req, res, next) => {
-  let token = req.headers['x-access-token'] || req.headers['authorization'] // || req.body.token
-  if (token) {
-    jwt.verify(token, config.secret, (err, decoded) => {
-      if (err) {
-        console.log({
-          "error": true,
-          "message": 'Unauthorized access.'
-        });
-        res.redirect('/login');
-      }
-      req.decoded = decoded;
-      next();
-    });
-  } else { //pas de token
-    console.log({
-      "error": true,
-      "message": 'Unauthorized access.'
-    });
-    res.redirect('/login');
-  }
+
+function jwt() {
+  const secret = "superkangourou";
+  return expressJwt({ secret,isRevoked }).unless({
+    path: [
+      //ces routes ne requierent pas de token
+      '/users/authentication',
+      '/users/register'
+    ]
+  });
 }
 
-class Token {
-  login (req, res) {
-    const username = req.body.username;
-    const password = req.body.password;
-    //check user info
-    const fakename = 'yassine';
-    const fakepass = 'password';
-    if (username && password) {
-      if (username === fakename && password === fakepass) {
-        const token = jwt.sign({username: username},
-          config.secret,
-          { expiresIn: '2h'}
-        );
-        res.json({
-          success: true,
-          message: 'Successfuly Authenticated',
-          token: token
-        });
-      } else {
-        res.send(403).json({
-          success: false,
-          message: 'Incorrect username or password'
-        });
-      }
-    } else {
-      res.send(400).json({
-        success: false,
-        message: 'authentication failed'
-      });
-    }
+async function isRevoked(req, payload, done){
+  const user = await userHandling.getById(payload.sub);
+// retire le token si pas de user
+  if (!user) {
+    return done(null, true);
   }
-  index(req, res) {
-    res.json({
-      success: true,
-      message:'Index Page'
-    });
-  }
+  done();
 }
 
-
-module.exports = {
-  tokenChecker,
-  Token
-};
+module.exports = jwt;
